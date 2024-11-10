@@ -5,6 +5,15 @@ struct valores{
 	  int ano_atual;
 };
 
+void verificar_datas(int ano_nasc, int ano_atual){
+	 int res = ano_atual - ano_nasc;
+	 if(ano_nasc < ano_atual){
+	 	printf("em %d voce tem %d anos", ano_atual,res);
+	 } else if (ano_nasc > ano_atual){
+	 	printf("tem parada errado ai :⁠-⁠(");
+	 }
+}
+
 int main() {
 	struct valores vava;
 
@@ -15,13 +24,6 @@ int main() {
 
   printf("agora digite o ano atual: ");
   scanf("%d", &vava.ano_atual);
-
-  int res = vava.ano_atual - vava.ano_nasc;
-
-  if(vava.ano_nasc < vava.ano_atual){
-    printf("sua idade eh %d anos",res);
-  } else if (vava.ano_nasc > vava.ano_atual){
-    printf("tem parada errado ai :⁠-⁠(");
-  }
+  verificar_datas(vava.ano_nasc, vava.ano_atual);
   return 0;
 }
